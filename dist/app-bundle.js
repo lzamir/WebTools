@@ -148,7 +148,7 @@ ReactDOM.render(React.createElement(Page, { categories: categories }), document.
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\r\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\r\n}\r\n\r\nh1 {\r\n  padding: 40px;\r\n  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;\r\n  background: dodgerblue url(https://pages-themes.github.io/architect/assets/images/header-bg.jpg) 0 0 repeat-x;\r\n  border-bottom: solid 1px #275da1;\r\n  color: white;\r\n}", ""]);
+exports.push([module.i, "body {\r\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\r\n}\r\n\r\nh1 {\r\n  padding: 40px;\r\n  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;\r\n  background: dodgerblue url(https://pages-themes.github.io/architect/assets/images/header-bg.jpg) 0 0 repeat-x;\r\n  border-bottom: solid 1px #275da1;\r\n  color: white;\r\n}\r\n\r\nli {\r\n  line-height: 2em;\r\n}", ""]);
 
 
 /***/ }),
