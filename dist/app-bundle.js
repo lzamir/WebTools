@@ -93,36 +93,38 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-var Hello = /** @class */ (function (_super) {
-    __extends(Hello, _super);
-    function Hello() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Hello.prototype.render = function () {
-        return (React.createElement("h1", null, "Welcome to React!!"));
-    };
-    return Hello;
-}(React.Component));
-exports.Hello = Hello;
-ReactDOM.render(React.createElement(Hello, null), document.getElementById('root'));
+function List(props) {
+    var sidebar = (React.createElement("ul", null, props.links.map(function (link) {
+        return React.createElement("li", { key: link.id },
+            React.createElement("a", { target: "_blank", href: link.ref }, link.title));
+    })));
+    return (React.createElement("div", null, sidebar));
+}
+function Page(props) {
+    var sidebar = (React.createElement("ul", null, props.categories.map(function (category) {
+        return React.createElement("li", { key: category.id },
+            React.createElement("h2", null, category.title),
+            React.createElement(List, { links: category.links }));
+    })));
+    return (React.createElement("div", null, sidebar));
+}
+var linksGenerators = [
+    { id: 1, title: 'css3generator.com', ref: 'https://css3generator.com' },
+    { id: 2, title: 'css3maker.com', ref: 'https://www.css3maker.com' },
+    { id: 3, title: 'css3.mikeplate.com', ref: 'https://css3.mikeplate.com' },
+    { id: 4, title: 'css3gen.com', ref: 'https://css3gen.com' }
+];
+var linksGradient = [
+    { id: 1, title: 'UltiUltimate CSS Gradient Generator', ref: 'https://www.colorzilla.com/gradient-editor' },
+    { id: 2, title: 'westciv.com/tools/gradients', ref: 'https://westciv.com/tools/gradients' },
+];
+var categories = [
+    { id: "generators", title: 'General Generators', links: linksGenerators },
+    { id: "gradient", title: 'Gradient', links: linksGradient },
+];
+ReactDOM.render(React.createElement(Page, { categories: categories }), document.getElementById('root'));
 
 
 /***/ }),
