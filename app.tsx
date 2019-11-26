@@ -3,6 +3,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+import './styles/general.css'; 
+
 function List(props) {
   const sidebar = (
     <ul>

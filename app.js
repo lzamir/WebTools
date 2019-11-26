@@ -1,22 +1,42 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var React = require('react');
 var ReactDOM = require('react-dom');
-function Blog(props) {
-    var sidebar = (React.createElement("ul", null, props.posts.map(function (post) {
-        return React.createElement("li", { key: post.id }, post.title);
+require("./styles/general.css");
+function List(props) {
+    var sidebar = (React.createElement("ul", null, props.links.map(function (link) {
+        return React.createElement("li", { key: link.id },
+            React.createElement("a", { target: "_blank", href: link.ref }, link.title));
     })));
-    var content = props.posts.map(function (post) {
-        return React.createElement("div", { key: post.id },
-            React.createElement("h3", null, post.title),
-            React.createElement("p", null, post.content));
-    });
-    return (React.createElement("div", null,
-        sidebar,
-        React.createElement("hr", null),
-        content));
+    return (React.createElement("div", null, sidebar));
 }
-var posts = [
-    { id: 1, title: 'Hello World', content: 'Welcome to learning React!' },
-    { id: 2, title: 'Installation', content: 'You can install React from npm.' }
+function Header(props) {
+    var header = (React.createElement("h1", null, "Lior Zamir Recommended Web Tools for Developers"));
+    return (React.createElement("div", null, header));
+}
+function Page(props) {
+    var sidebar = (React.createElement("ul", null, props.categories.map(function (category) {
+        return React.createElement("li", { key: category.id },
+            React.createElement("h2", null, category.title),
+            React.createElement(List, { links: category.links }));
+    })));
+    return (React.createElement("div", null,
+        React.createElement(Header, null),
+        sidebar));
+}
+var linksGenerators = [
+    { id: 1, title: 'css3generator.com', ref: 'https://css3generator.com' },
+    { id: 2, title: 'css3maker.com', ref: 'https://www.css3maker.com' },
+    { id: 3, title: 'css3.mikeplate.com', ref: 'https://css3.mikeplate.com' },
+    { id: 4, title: 'css3gen.com', ref: 'https://css3gen.com' }
 ];
-ReactDOM.render(React.createElement(Blog, { posts: posts }), document.getElementById('root'));
+var linksGradient = [
+    { id: 1, title: 'UltiUltimate CSS Gradient Generator', ref: 'https://www.colorzilla.com/gradient-editor' },
+    { id: 2, title: 'westciv.com/tools/gradients', ref: 'http://westciv.com/tools/gradients' },
+];
+var categories = [
+    { id: "generators", title: 'General CSS Generators', links: linksGenerators },
+    { id: "gradient", title: 'CSS Gradient Generators', links: linksGradient },
+];
+ReactDOM.render(React.createElement(Page, { categories: categories }), document.getElementById('root'));
 //# sourceMappingURL=app.js.map
