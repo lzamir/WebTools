@@ -19,6 +19,18 @@ function List(props) {
   );
 }
 
+function Header(props) {
+  const header = (
+    <h1>
+      Lior Zamir Recommended Web Tools for Developers
+    </h1>
+  );
+
+  return (
+    <div>{header}</div>
+  );
+}
+
 function Page(props) {
   const sidebar = (
     <ul>
@@ -31,7 +43,7 @@ function Page(props) {
   );
 
   return (
-    <div>{sidebar}</div>
+    <div><Header />{sidebar}</div>
   );
 }
 
@@ -48,8 +60,8 @@ const linksGradient = [
 ];
 
 const categories = [
-  { id: "generators", title: 'General Generators', links: linksGenerators },
-  { id: "gradient", title: 'Gradient', links: linksGradient },
+  { id: "generators", title: 'General CSS Generators', links: linksGenerators },
+  { id: "gradient", title: 'CSS Gradient Generators', links: linksGradient },
 ];
 
 ReactDOM.render(

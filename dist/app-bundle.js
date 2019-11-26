@@ -102,13 +102,19 @@ function List(props) {
     })));
     return (React.createElement("div", null, sidebar));
 }
+function Header(props) {
+    var header = (React.createElement("h1", null, "Lior Zamir Recommended Web Tools for Developers"));
+    return (React.createElement("div", null, header));
+}
 function Page(props) {
     var sidebar = (React.createElement("ul", null, props.categories.map(function (category) {
         return React.createElement("li", { key: category.id },
             React.createElement("h2", null, category.title),
             React.createElement(List, { links: category.links }));
     })));
-    return (React.createElement("div", null, sidebar));
+    return (React.createElement("div", null,
+        React.createElement(Header, null),
+        sidebar));
 }
 var linksGenerators = [
     { id: 1, title: 'css3generator.com', ref: 'https://css3generator.com' },
@@ -118,11 +124,11 @@ var linksGenerators = [
 ];
 var linksGradient = [
     { id: 1, title: 'UltiUltimate CSS Gradient Generator', ref: 'https://www.colorzilla.com/gradient-editor' },
-    { id: 2, title: 'westciv.com/tools/gradients', ref: 'https://westciv.com/tools/gradients' },
+    { id: 2, title: 'westciv.com/tools/gradients', ref: 'http://westciv.com/tools/gradients' },
 ];
 var categories = [
-    { id: "generators", title: 'General Generators', links: linksGenerators },
-    { id: "gradient", title: 'Gradient', links: linksGradient },
+    { id: "generators", title: 'General CSS Generators', links: linksGenerators },
+    { id: "gradient", title: 'CSS Gradient Generators', links: linksGradient },
 ];
 ReactDOM.render(React.createElement(Page, { categories: categories }), document.getElementById('root'));
 
