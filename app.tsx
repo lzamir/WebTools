@@ -3,7 +3,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-import './styles/general.css'; 
+import './styles/general.css';
 
 function List(props) {
   const sidebar = (
@@ -61,9 +61,17 @@ const linksGradient = [
   { id: 2, title: 'westciv.com/tools/gradients', ref: 'http://westciv.com/tools/gradients' },
 ];
 
+const linksButtons = [
+  { id: 1, title: 'cssbuttoncreator.com', ref: 'https://cssbuttoncreator.com' },
+  { id: 2, title: 'bestcssbuttongenerator.com', ref: 'https://www.bestcssbuttongenerator.com' },
+  { id: 3, title: 'css3gen.com/button-generator', ref: 'https://css3gen.com/button-generator' },
+  { id: 4, title: 'loading.io/button/generator', ref: 'https://loading.io/button/generator' },
+];
+
 const categories = [
   { id: "generators", title: 'General CSS Generators', links: linksGenerators },
   { id: "gradient", title: 'CSS Gradient Generators', links: linksGradient },
+  { id: "buttons", title: 'CSS Buttons Generators', links: linksButtons },
 ];
 
 ReactDOM.render(
