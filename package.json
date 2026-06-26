@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "css-loader": "^3.2.0",
-    "eslint": "^6.6.0",
+    "eslint": "^10.5.0",
     "eslint-config-defaults": "^9.0.0",
     "style-loader": "^1.0.0"
   }
