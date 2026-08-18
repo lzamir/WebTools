@@ -1,14 +1,331 @@
-﻿<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Lior Zamir Recommended Web Tools for Developers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WebTools — Curated Web Development Tools</title>
+  <meta name="description" content="A curated directory of free online tools for web developers: CSS generators, color palettes, gradients, layout builders, animation and typography helpers." />
+  <link rel="canonical" href="https://lzamir.github.io/WebTools/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WebTools — Curated Web Development Tools" />
+  <meta property="og:description" content="A curated directory of free online tools for web developers: CSS generators, color palettes, gradients, layout builders, animation and typography helpers." />
+  <meta property="og:url" content="https://lzamir.github.io/WebTools/" />
+  <meta property="og:image" content="https://lzamir.github.io/WebTools/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f8fa" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1117" />
   <meta name="google-site-verification" content="wDnyUyfWp4Zb92IrhpNKFXzGH2bplOFMC6W_rPElc6g" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script>
+    /* Theme bootstrap: apply saved override before first paint to avoid a flash. */
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
 </head>
 <body>
-  <div id="root"></div>
-  <!-- scripts -->
-  <script src="./dist/app-bundle.js"></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <h1 class="site-title">WebTools</h1>
+    <p class="tagline">Curated web development tools, hand-picked by Lior Zamir.</p>
+    <div class="site-controls"></div>
+  </header>
+
+  <main id="main">
+    <section class="category" id="general" aria-labelledby="general-title">
+      <h2 id="general-title">General Tools &amp; Collections</h2>
+      <ul class="cards">
+        <li class="card" data-tags="css generator shadow gradient text effects">
+          <a href="https://css3gen.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">CSS3 Gen</strong>
+            <span class="card-desc">Generators for shadows, gradients, text effects and more.</span>
+            <span class="card-host">css3gen.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="css generator reference collection">
+          <a href="https://www.cssportal.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">CSS Portal</strong>
+            <span class="card-desc">Large collection of CSS generators and references.</span>
+            <span class="card-host">cssportal.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="toolbox open source triangle gradient shadow svg">
+          <a href="https://omatsuri.app" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Omatsuri</strong>
+            <span class="card-desc">Open-source browser toolbox: triangles, gradients, shadows, SVG.</span>
+            <span class="card-host">omatsuri.app</span>
+          </a>
+        </li>
+        <li class="card" data-tags="toolbox css text image code converter">
+          <a href="https://10015.io" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">10015 Tools</strong>
+            <span class="card-desc">All-in-one toolbox for CSS, text, images and code.</span>
+            <span class="card-host">10015.io</span>
+          </a>
+        </li>
+        <li class="card" data-tags="svg optimizer minify compress">
+          <a href="https://jakearchibald.github.io/svgomg/" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">SVGOMG</strong>
+            <span class="card-desc">Optimize SVG files right in the browser.</span>
+            <span class="card-host">jakearchibald.github.io</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="colors" aria-labelledby="colors-title">
+      <h2 id="colors-title">Colors &amp; Palettes</h2>
+      <ul class="cards">
+        <li class="card" data-tags="color palette scheme generator export">
+          <a href="https://coolors.co" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Coolors</strong>
+            <span class="card-desc">Fast color palette generator with export options.</span>
+            <span class="card-host">coolors.co</span>
+          </a>
+        </li>
+        <li class="card" data-tags="color palette curated gallery">
+          <a href="https://colorhunt.co" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Color Hunt</strong>
+            <span class="card-desc">Curated gallery of hand-picked color palettes.</span>
+            <span class="card-host">colorhunt.co</span>
+          </a>
+        </li>
+        <li class="card" data-tags="color font preview live page">
+          <a href="https://www.realtimecolors.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Realtime Colors</strong>
+            <span class="card-desc">Preview palettes and fonts on a realistic page in real time.</span>
+            <span class="card-host">realtimecolors.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="color picker oklch wide gamut converter">
+          <a href="https://oklch.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">OKLCH Color Picker</strong>
+            <span class="card-desc">Picker and converter for the modern OKLCH color space.</span>
+            <span class="card-host">oklch.com</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="gradients" aria-labelledby="gradients-title">
+      <h2 id="gradients-title">Gradient Generators</h2>
+      <ul class="cards">
+        <li class="card" data-tags="gradient editor photoshop css">
+          <a href="https://www.colorzilla.com/gradient-editor" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">ColorZilla Gradient Editor</strong>
+            <span class="card-desc">Classic Photoshop-like gradient editor with CSS output.</span>
+            <span class="card-host">colorzilla.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="gradient background designer css">
+          <a href="https://cssgradient.io" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">CSS Gradient</strong>
+            <span class="card-desc">Simple gradient designer with copy-ready CSS.</span>
+            <span class="card-host">cssgradient.io</span>
+          </a>
+        </li>
+        <li class="card" data-tags="gradient wide gamut oklch modern css">
+          <a href="https://gradient.style" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">gradient.style</strong>
+            <span class="card-desc">Modern CSS gradients in wide-gamut color spaces.</span>
+            <span class="card-host">gradient.style</span>
+          </a>
+        </li>
+        <li class="card" data-tags="gradient tool veteran">
+          <a href="https://westciv.com/tools/gradients" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Westciv Gradients</strong>
+            <span class="card-desc">Veteran gradient building tool.</span>
+            <span class="card-host">westciv.com</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="buttons" aria-labelledby="buttons-title">
+      <h2 id="buttons-title">Buttons &amp; UI Elements</h2>
+      <ul class="cards">
+        <li class="card" data-tags="button generator css">
+          <a href="https://cssbuttoncreator.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">CSS Button Creator</strong>
+            <span class="card-desc">Visual CSS button designer.</span>
+            <span class="card-host">cssbuttoncreator.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="button generator css">
+          <a href="https://www.bestcssbuttongenerator.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Best CSS Button Generator</strong>
+            <span class="card-desc">Quick CSS button generator with presets.</span>
+            <span class="card-host">bestcssbuttongenerator.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="button generator css">
+          <a href="https://css3gen.com/button-generator" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">CSS3 Gen Button Generator</strong>
+            <span class="card-desc">Button generator from the CSS3 Gen suite.</span>
+            <span class="card-host">css3gen.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="ui elements open source buttons cards loaders community">
+          <a href="https://uiverse.io" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Uiverse</strong>
+            <span class="card-desc">Thousands of open-source UI elements in pure CSS.</span>
+            <span class="card-host">uiverse.io</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="layout" aria-labelledby="layout-title">
+      <h2 id="layout-title">Layout &amp; Grid</h2>
+      <ul class="cards">
+        <li class="card" data-tags="grid layout builder visual css">
+          <a href="https://grid.layoutit.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">LayoutIt Grid</strong>
+            <span class="card-desc">Visual CSS grid builder with code export.</span>
+            <span class="card-host">grid.layoutit.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="grid generator visual css">
+          <a href="https://cssgrid-generator.netlify.app" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">CSS Grid Generator</strong>
+            <span class="card-desc">Drag-and-drop CSS grid generator.</span>
+            <span class="card-host">cssgrid-generator.netlify.app</span>
+          </a>
+        </li>
+        <li class="card" data-tags="flexbox learn game practice">
+          <a href="https://flexboxfroggy.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Flexbox Froggy</strong>
+            <span class="card-desc">Learn flexbox by playing a game.</span>
+            <span class="card-host">flexboxfroggy.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="grid learn game practice">
+          <a href="https://cssgridgarden.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Grid Garden</strong>
+            <span class="card-desc">Learn CSS grid by playing a game.</span>
+            <span class="card-host">cssgridgarden.com</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="effects" aria-labelledby="effects-title">
+      <h2 id="effects-title">Effects &amp; Backgrounds</h2>
+      <ul class="cards">
+        <li class="card" data-tags="shadow box-shadow smooth layered generator">
+          <a href="https://shadows.brumm.af" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Smooth Shadow</strong>
+            <span class="card-desc">Layered, natural box-shadow generator.</span>
+            <span class="card-host">shadows.brumm.af</span>
+          </a>
+        </li>
+        <li class="card" data-tags="neumorphism soft ui shadow generator">
+          <a href="https://neumorphism.io" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Neumorphism.io</strong>
+            <span class="card-desc">Soft-UI (neumorphism) shadow generator.</span>
+            <span class="card-host">neumorphism.io</span>
+          </a>
+        </li>
+        <li class="card" data-tags="glassmorphism blur transparency generator">
+          <a href="https://css.glass" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">css.glass</strong>
+            <span class="card-desc">Glassmorphism CSS generator.</span>
+            <span class="card-host">css.glass</span>
+          </a>
+        </li>
+        <li class="card" data-tags="svg background shapes waves blobs generator">
+          <a href="https://haikei.app" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Haikei</strong>
+            <span class="card-desc">SVG background and shape generator.</span>
+            <span class="card-host">haikei.app</span>
+          </a>
+        </li>
+        <li class="card" data-tags="svg waves background generator">
+          <a href="https://getwaves.io" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Get Waves</strong>
+            <span class="card-desc">SVG wave generator for section dividers.</span>
+            <span class="card-host">getwaves.io</span>
+          </a>
+        </li>
+        <li class="card" data-tags="svg blob organic shapes generator">
+          <a href="https://www.blobmaker.app" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Blobmaker</strong>
+            <span class="card-desc">Organic SVG blob generator.</span>
+            <span class="card-host">blobmaker.app</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="animation" aria-labelledby="animation-title">
+      <h2 id="animation-title">Animation &amp; Easing</h2>
+      <ul class="cards">
+        <li class="card" data-tags="animation css library keyframes generator">
+          <a href="https://animista.net" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Animista</strong>
+            <span class="card-desc">On-demand CSS animation library and playground.</span>
+            <span class="card-host">animista.net</span>
+          </a>
+        </li>
+        <li class="card" data-tags="easing curve bezier timing function editor">
+          <a href="https://cubic-bezier.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">cubic-bezier.com</strong>
+            <span class="card-desc">Visual easing curve editor.</span>
+            <span class="card-host">cubic-bezier.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="easing functions cheat sheet reference">
+          <a href="https://easings.net" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Easings.net</strong>
+            <span class="card-desc">Easing function cheat sheet with previews.</span>
+            <span class="card-host">easings.net</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="category" id="typography" aria-labelledby="typography-title">
+      <h2 id="typography-title">Typography</h2>
+      <ul class="cards">
+        <li class="card" data-tags="type scale modular font size calculator">
+          <a href="https://typescale.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Type Scale</strong>
+            <span class="card-desc">Modular type scale calculator.</span>
+            <span class="card-host">typescale.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="font stacks system fonts no webfont">
+          <a href="https://modernfontstacks.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Modern Font Stacks</strong>
+            <span class="card-desc">System font stacks that work on every platform.</span>
+            <span class="card-host">modernfontstacks.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="font pairing generator machine learning">
+          <a href="https://fontjoy.com" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Fontjoy</strong>
+            <span class="card-desc">Font pairing generator.</span>
+            <span class="card-host">fontjoy.com</span>
+          </a>
+        </li>
+        <li class="card" data-tags="fluid type space scale clamp responsive calculator">
+          <a href="https://utopia.fyi" target="_blank" rel="noopener noreferrer">
+            <strong class="card-title">Utopia</strong>
+            <span class="card-desc">Fluid type and space scale calculator.</span>
+            <span class="card-host">utopia.fyi</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Maintained by Lior Zamir · <a href="https://github.com/lzamir/WebTools" target="_blank" rel="noopener noreferrer">Source on GitHub</a> · Last updated August 2026</p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
