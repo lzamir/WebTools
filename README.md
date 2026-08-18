@@ -9,7 +9,8 @@ and React tools.
 
 ## How it works
 
-Buildless by design. No npm, no bundler, no framework, no CDN:
+Buildless by design. No npm, no bundler, no framework. The only
+external request is Google Analytics (gtag.js):
 
 - `index.html` — all content as semantic markup (works with JS disabled)
 - `styles/main.css` — design tokens, responsive card grid, automatic
