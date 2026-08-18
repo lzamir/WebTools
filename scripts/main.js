@@ -6,6 +6,17 @@ const controls = document.querySelector('.site-controls');
    of both the data-theme attribute and the localStorage entry. */
 const THEMES = ['auto', 'light', 'dark'];
 const LABELS = { auto: 'Theme: auto', light: 'Theme: light', dark: 'Theme: dark' };
+const THEME_COLORS = { light: '#f6f8fa', dark: '#0d1117' };
+
+/* Keep the theme-color metas in sync with a manual override: mobile browser
+   chrome otherwise keeps following the OS scheme even after a forced theme. */
+function syncThemeColor(theme) {
+  for (const scheme of ['light', 'dark']) {
+    const meta = document.querySelector(`meta[name="theme-color"][media*="${scheme}"]`);
+    if (!meta) continue;
+    meta.content = theme === 'auto' ? THEME_COLORS[scheme] : THEME_COLORS[theme];
+  }
+}
 
 function applyTheme(theme) {
   try {
@@ -17,6 +28,7 @@ function applyTheme(theme) {
       localStorage.setItem('theme', theme);
     }
   } catch (e) { /* storage unavailable: theme still applies for this page */ }
+  syncThemeColor(theme);
 }
 
 function initTheme() {
@@ -25,6 +37,7 @@ function initTheme() {
     const saved = localStorage.getItem('theme');
     if (THEMES.includes(saved)) current = saved;
   } catch (e) {}
+  syncThemeColor(current);
 
   const button = document.createElement('button');
   button.type = 'button';
@@ -55,6 +68,7 @@ function initSearch() {
   const empty = document.createElement('p');
   empty.className = 'no-results';
   empty.textContent = 'No matching tools.';
+  empty.setAttribute('role', 'status');
   empty.hidden = true;
   document.querySelector('main').append(empty);
 
@@ -64,7 +78,7 @@ function initSearch() {
     for (const section of sections) {
       let sectionVisible = false;
       for (const card of section.querySelectorAll('.card')) {
-        const haystack = (card.textContent + ' ' + (card.dataset.tags || '')).toLowerCase();
+        const haystack = (card.textContent + ' ' + (card.dataset.tags || '')).replace(/\s+/g, ' ').toLowerCase();
         const match = query === '' || haystack.includes(query);
         card.hidden = !match;
         if (match) sectionVisible = true;
