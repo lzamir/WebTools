@@ -2,7 +2,8 @@
 
 A curated directory of free online tools for web developers —
 CSS generators, color palettes, gradients, layout builders,
-animation and typography helpers.
+animation and typography helpers, plus JavaScript, TypeScript
+and React tools.
 
 **Live site:** https://lzamir.github.io/WebTools/
 
